@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Postcard Editor
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -29,42 +29,51 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Development plan
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Set-up local environment
+- Choose best approach to app architecture
+- Split design mockup into small separate pieces which are could be delivered clearly and quickly
+- Start developing components, combine and connect them to each other, step-by-step
+- Writing tests first - if it's possible. If not - then cover critical functionality later
+- If everything tested and worked fine - then putting the whole application together
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## List of tasks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- set-up react app via `CRA`
+- implement store skeleton as combination of react hooks and context api - `CreateContext` + `useReducer` 
+- lay the architecture foundation (`Atomic Design`)
+- develop `components` - Button, EditableText, Postcard, Sidebar, Layout
+- implement rotation logic
+- implement zoom logic
+- implement adding list of texts on the picture
+- implement text editing
+- implement drag-n-drop
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Estimated efforts
 
-## Learn More
+Can be delivered by 1 day (without improvement tasks)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Architecture
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+CRA (Create React App) + Atomic Design + context api & useReducer
 
-### Code Splitting
+## Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Jest + Enzyme, several tests are in `App.text.js`
 
-### Analyzing the Bundle Size
+## Suggestions for improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- finish drag-n-drop
+- possibility to upload image | several images, then - display it as a gallery
+- improve UI (for example, no need to zoom-in picture as it is in design because images may have different resolution and won't be fitted into the view - 
+in this case better to use fixed sizes for the picture wrapper; find a solution for mobile)
 
-### Making a Progressive Web App
+## Technologies used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+`React` + `CRA` (Create React App) + `Atomic Design` + `context api` & `useReducer`, `css-modules`, `react-dnd`, `jest`, `enzyme`,
+pre-commit hook with husky and `prettier` to format code
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`Herman Semykozov`

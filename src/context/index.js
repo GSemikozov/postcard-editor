@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useCallback, useMemo } from "react";
+import React, { createContext, useReducer, useMemo } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const EditorContext = createContext(null);
