@@ -8,14 +8,14 @@ export let newItemByDefault = null;
 export const EditorReducer = (state, action) => {
   switch (action.type) {
     case "ADD_ITEM":
-      const x = {
+      const newItem = {
         id: uuidv4(),
         text: "New text",
       };
 
-      newItemByDefault = x;
+      newItemByDefault = newItem;
 
-      state.imgListItems.push(x);
+      state.imgListItems.push(newItem);
 
       return {
         ...state,
