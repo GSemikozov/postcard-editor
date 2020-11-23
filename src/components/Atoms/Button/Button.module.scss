@@ -1,0 +1,29 @@
+.button {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  height: 30px;
+  width: 108px;
+  background: #63abff;
+  border-radius: 2px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: darken(#63abff, 10%);
+  }
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}

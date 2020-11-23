@@ -1,0 +1,40 @@
+.postcardWrap {
+  flex-grow: 1;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  //width: 326px;
+  max-height: 484px;
+
+  &.isIcon {
+    height: 52px;
+    width: 35px;
+  }
+
+  &.isIcon + &.isIcon {
+    margin-left: 16px;
+  }
+
+  &.isIcon .postcardList {
+    transform: scale(0.25) !important;
+  }
+}
+
+.postcardImg {
+  flex-grow: 1;
+  display: flex;
+  max-width: 100%;
+}
+
+.postcardList {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+  z-index: 1;
+}
