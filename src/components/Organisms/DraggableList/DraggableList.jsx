@@ -8,7 +8,7 @@ const style = {
   cursor: "move",
 };
 
-const Card = ({ id, text, index, moveItem }) => {
+const Item = ({ id, text, index, moveItem }) => {
   const ref = useRef(null);
 
   const [, drop] = useDrop({
@@ -93,7 +93,7 @@ const Container = ({ data, className }) => {
     );
     const renderItem = (item, index) => {
       return (
-        <Card
+        <Item
           key={item.id}
           index={index}
           id={item.id}
